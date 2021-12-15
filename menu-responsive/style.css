@@ -1,110 +1,117 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background: rgb(0, 0, 0);
-}
-
-header {
-    position: absolute;
-    width: 100%;
-    height: 8vh;
-    top: 0;
-    left: 0;
-    background: black;
-    color: rgb(255, 255, 255);
-    padding: 0 2rem;
-}
-
-nav {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.toggle {
-    display: none;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style-type: none;
-    width: 550px;
-}
-
-.menu li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.btn {
-    bottom: 0;
-    background: pink;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-}
-
-.btn.btn-2nd {
-    background: transparent;
-    border: 2px solid pink;
-    color: #fff;
-}
-
-@media all and (max-width: 991px) {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background: rgb(0, 0, 0);
+    }
+    
     header {
-        background: transparent;
-    }
-    .toggle {
-        display: block;
-        cursor: pointer;
-        position: relative;
-        z-index: 20px;
-        font-size: 2rem;
-    }
-    .logo {
-        position: relative;
-        z-index: 20;
-    }
-    .open .fermer {
-        display: block;
-    }
-    .ouvrir {
-        display: block;
-    }
-    .open .ouvrir {
-        display: none;
-    }
-    .fermer {
-        display: none;
-    }
-    .menu {
-        top: 0;
-        font: 0;
-        width: 100%;
-        padding: 2rem;
-        height: 100vh;
         position: absolute;
-        flex-direction: column;
-        transition: transform 1s;
-        transform: translateX(-100%);
-        justify-content: space-around;
-        background: rgba(0, 0, 0, 0.87);
+        width: 100%;
+        height: 8vh;
+        top: 0;
+        left: 0;
+        background: black;
+        color: rgb(255, 255, 255);
+        padding: 0 2rem;
     }
-    .btn {
+    
+    nav {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
         font-size: 2rem;
     }
+    
+    .toggle {
+        display: none;
+    }
+    
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style-type: none;
+        width: 550px;
+    }
+    
     .menu li a {
-        font-size: 2rem;
+        color: #fff;
+        text-decoration: none;
     }
-    .open .menu {
-        transform: translateX(0);
+    
+    .btn {
+        bottom: 0;
+        background: pink;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
     }
-}
+    
+    .btn.btn-2nd {
+        background: transparent;
+        border: 2px solid pink;
+        color: #fff;
+    }
+    
+    @media all and (max-width: 991px) {
+        header {
+            background: transparent
+        }
+        .toggle {
+            display: block;
+            cursor: pointer;
+            position: relative;
+            z-index: 20;
+            font-size: 2rem;
+        }
+        .logo {
+            position: relative;
+            z-index: 20;
+        }
+        .open .fermer {
+            display: block;
+        }
+        .ouvrir {
+            display: block;
+        }
+        .fermer {
+            display: none;
+        }
+        .open .ouvrir {
+            display: none;
+        }
+        .open .fermer {
+            display: block;
+        }
+        .menu {
+            top: 0;
+            font: 0;
+            width: 100%;
+            padding: 2rem;
+            height: 100vh;
+            position: absolute;
+            flex-direction: column;
+            transition: transform 1s;
+            transform: translateX(-100%);
+            justify-content: space-around;
+            background: rgba(0, 0, 0, 0.87);
+        }
+        .btn {
+            font-size: 2rem;
+        }
+        .menu li a {
+            font-size: 2rem;
+        }
+        .open .menu {
+            transform: translateX(0);
+        }
+    }
