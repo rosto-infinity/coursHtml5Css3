@@ -32,7 +32,6 @@ nav {
 }
 
 .menu {
-    font-size: 1.1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -74,26 +73,30 @@ nav {
         position: relative;
         z-index: 20;
     }
-    .ouvrir,
     .open .fermer {
         display: block;
     }
-    .fermer,
+    .ouvrir {
+        display: block;
+    }
     .open .ouvrir {
         display: none;
     }
+    .fermer {
+        display: none;
+    }
     .menu {
-        position: absolute;
         top: 0;
         font: 0;
         width: 100%;
-        height: 100vh;
-        background: rgba(236, 3, 3, 0.87);
-        flex-direction: column;
-        justify-content: space-around;
         padding: 2rem;
-        transform: translateX(-100%);
+        height: 100vh;
+        position: absolute;
+        flex-direction: column;
         transition: transform 1s;
+        transform: translateX(-100%);
+        justify-content: space-around;
+        background: rgba(0, 0, 0, 0.87);
     }
     .btn {
         font-size: 2rem;
@@ -101,7 +104,7 @@ nav {
     .menu li a {
         font-size: 2rem;
     }
-    .opem .menu {
+    .open .menu {
         transform: translateX(0);
     }
 }
