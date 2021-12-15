@@ -1,0 +1,36 @@
+*,
+ ::before,
+ ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 37px;
+    text-align: center;
+}
+
+body {
+    background: rgb(58, 58, 238);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 70px auto 0px;
+    background: red;
+    width: 80%;
+    justify-content: center;
+}
+
+.item {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}

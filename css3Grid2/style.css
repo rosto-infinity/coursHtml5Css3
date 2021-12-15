@@ -1,0 +1,110 @@
+        :root {
+           --color1: rgb(0, 0, 0);
+           --color2: orange;
+           --color3: rgb(190, 176, 176);
+           --color4: white;
+       }
+       
+       * {
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+       }
+       
+       .grid {
+           border: 2px solid var(--color2);
+           padding: 10px;
+           margin-top: 20px;
+           border-radius: 10px;
+       }
+       
+       .grid-container {
+           display: grid;
+           grid-template-columns: 40% 60%;
+           padding: 20px;
+       }
+       
+       .img {
+           text-align: center;
+       }
+       
+       form {
+           display: grid;
+           max-width: 400px;
+           grid-template-columns: 1fr 1fr;
+           grid-template-rows: 1fr 1fr 1fr;
+           grid-template-areas: "input1 input2" "ta ta" "bt espace";
+       }
+       
+       #firsname {
+           border: 1px solid var(--color3);
+           grid-area: input1;
+       }
+       
+       #firsname,
+       textarea,
+       #surname {
+           border: 1px solid var(--color3);
+       }
+       
+       #surname {
+           grid-area: input2;
+       }
+       
+       textarea {
+           grid-area: ta;
+           resize: none;
+           height: 200px;
+       }
+       
+       input[type="submit"] {
+           grid-area: bt;
+           cursor: pointer;
+           background: var(--color1);
+           color: var(--color4);
+           border: 1px solid var(--color4);
+       }
+       
+       .esp {
+           grid-area: espace;
+       }
+       
+       input,
+       textarea {
+           margin: 5px;
+           height: 45px;
+           padding: 10px;
+           border-radius: 5px;
+           font-size: 1.1rem;
+       }
+       
+       .content-grid {
+           margin-top: 105px;
+           display: grid;
+           width: 300px;
+           height: 300px;
+           grid-template-rows: 1fr 1fr 1fr;
+           grid-template-columns: 1fr 1fr 1fr;
+       }
+       
+       .contenue {
+           border: 1px solid red;
+       }
+       /************* responsive **************/
+       
+       @media screen and (max-width: 1000px) {
+           .grid-container {
+               display: block;
+           }
+           .img {
+               text-align: center;
+           }
+       }
+       
+       @media screen and (max-width:780px) {
+           form {
+               grid-template-columns: 1fr;
+               grid-template-rows: 1fr 1fr 1fr 1fr;
+               grid-template-areas: "input1" "input2" "ta" "bt";
+           }
+       }

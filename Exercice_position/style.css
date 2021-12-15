@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+li {
+    /* justify-content: flex-end; */
+    /* flex-flow: row wrap; */
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+
+/* 
+@media (max-width: 450px) {
+    li {
+        flex-flow: column wrap;
+    }
+} */
