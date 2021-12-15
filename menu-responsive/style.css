@@ -62,7 +62,7 @@ nav {
 
 @media all and (max-width: 991px) {
     header {
-        /* background: transparent; */
+        background: transparent;
     }
     .toggle {
         display: block;
