@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+body {
+    background: rgb(0, 0, 0);
+}
+
 header {
     position: absolute;
     width: 100%;
@@ -58,7 +62,7 @@ nav {
 
 @media all and (max-width: 991px) {
     header {
-        background: transparent;
+        /* background: transparent; */
     }
     .toggle {
         display: block;
